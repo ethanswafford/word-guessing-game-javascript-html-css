@@ -1,1 +1,1 @@
-# word-guessing-game-javescript-html-css
+# word-guessing-game-javascript-html-css
