@@ -1,3 +1,9 @@
+let attempts = 10;
+let wordList = ['javascript', 'html', 'css'];
+let chosenWord = wordList[Math.floor(Math.random() * wordList.length)];
+let guessedLetters = [];
+let hiddenWord = [];
+
 // 🎮 Function students will build next
 function startGame(letter) {
   console.log(`You pressed: ${letter}`);
