@@ -19,3 +19,6 @@ window.addEventListener("keydown", function (event) {
     console.log("Please press a valid letter (A–Z).");
   }
 });
+
+// check to see if the script is loading
+console.log('JavaScript is hooked into the html');
