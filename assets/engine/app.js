@@ -70,9 +70,11 @@ function startGame(letter) {
   console.log('Guessed Letters: ' + guessedLetters.join(', '))
 
   // 4️⃣ (Bonus) Show guessed letters and progress dynamically in the console or DOM.
+  maskedWordEl.textContent = hiddenWord.join(' ');
+  attemptsEl.textContent = attemptsCount;
+  guessedLettersEl.textContent = guessedLetters.length > 0 ? guessedLetters.join(" ") : "None yet";
 
-
-}
+};
 
 // Game Reset
 function gameReset() {
