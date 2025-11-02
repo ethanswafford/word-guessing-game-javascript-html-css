@@ -53,6 +53,12 @@ function startGame(letter) {
     gameReset();
   }
 
+
+  // Game in the console
+  console.log('Word: ' + hiddenWord.join(' '));
+  console.log('Attemps Remaining: ' + attemptsCount);
+  console.log('Guessed Letters: ' + guessedLetters.join(', '))
+
   // 4️⃣ (Bonus) Show guessed letters and progress dynamically in the console or DOM.
 
 
