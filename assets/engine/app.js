@@ -6,6 +6,8 @@ let chosenWord = wordList[Math.floor(Math.random() * wordList.length)];
 let guessedLetters = [];
 let hiddenWord = [];
 
+
+// Create underscores to match chosen word length
 for (let i = 0; i < chosenWord.length; i++) {
   hiddenWord.push("_");
 }
@@ -35,7 +37,21 @@ function startGame(letter) {
   }
 
   // 3️⃣ Detect win or loss and display a message.
+  if (hiddenWord.includes("_") === false) {
+    alert(`Congats! You Decrypted The Word: ${chosenWord}.`);
+    gameReset();
+  } else if (attemptsCount <= 0) {
+    alert(`Sorry. You Have No More Guesses Left. The Word Was ${chosenWord}. Please Try Again!`);
+    gameReset();
+  }
+
+  function gameReset() {
+
+  }
+
   // 4️⃣ (Bonus) Show guessed letters and progress dynamically in the console or DOM.
+
+
 }
 
 // ⌨️ Listen for keyboard input when the page loads
