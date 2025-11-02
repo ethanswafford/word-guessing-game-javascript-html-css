@@ -106,5 +106,8 @@ window.addEventListener("keydown", function (event) {
   }
 });
 
+// keep the open window/browser tab focused on game key presses
+window.focus();
+
 // Check to see if the script is loading
 console.log('JavaScript is hooked into the html');
