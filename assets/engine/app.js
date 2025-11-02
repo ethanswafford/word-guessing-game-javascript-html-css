@@ -19,6 +19,11 @@ for (let i = 0; i < chosenWord.length; i++) {
 console.log('chosen word: ', chosenWord);
 console.log('hidden word: ', hiddenWord.join("_"));
 
+// Synch the html/js DOM
+maskedWordEl.textContent = hiddenWord.join(" ");
+attemptsEl.textContent = attemptsCount;
+guessedLettersEl.textContent = "None yet";
+
 // 🎮 Function students will build next
 function startGame(letter) {
   console.log(`You pressed: ${letter}`);
