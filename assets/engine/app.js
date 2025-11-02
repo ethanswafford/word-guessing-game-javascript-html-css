@@ -18,6 +18,14 @@ console.log('hidden word: ', hiddenWord.join("_"));
 function startGame(letter) {
   console.log(`You pressed: ${letter}`);
 
+  // Check for repeated incorrect letter guess per game
+  if (guessedLetters.includes(letter)) {
+    console.log(`You already guessed "${letter}"`);
+    return;
+  }
+  guessedLetters.push(letter);
+
+
   // flag for attemptsCount
   let attempts = false;
 
@@ -45,19 +53,20 @@ function startGame(letter) {
     gameReset();
   }
 
-  function gameReset() {
-    chosenWord = wordList[Math.floor(Math.random() * wordList.length)];
-    guessedLetters = [];
-    hiddenWord = [];
-
-    for (let i = 0; i < chosenWord.length; i++) {
-      hiddenWord.push("_");
-    }
-  }
-
   // 4️⃣ (Bonus) Show guessed letters and progress dynamically in the console or DOM.
 
 
+}
+
+// Game Reset
+function gameReset() {
+  chosenWord = wordList[Math.floor(Math.random() * wordList.length)];
+  guessedLetters = [];
+  hiddenWord = [];
+
+  for (let i = 0; i < chosenWord.length; i++) {
+    hiddenWord.push("_");
+  }
 }
 
 // ⌨️ Listen for keyboard input when the page loads
