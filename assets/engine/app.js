@@ -85,8 +85,14 @@ function gameReset() {
   for (let i = 0; i < chosenWord.length; i++) {
     hiddenWord.push("_");
   }
+
+  // Reset the DOM
+  maskedWordEl.textContent = hiddenWord.join(" ");
+  attemptsEl.textContent = attemptsCount = 10;
+  guessedLettersEl.textContent = "None yet";
+
   console.log(`New Word: ${chosenWord}.`);
-}
+};
 
 // ⌨️ Listen for keyboard input when the page loads
 window.addEventListener("keydown", function (event) {
