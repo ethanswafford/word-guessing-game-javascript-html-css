@@ -6,6 +6,11 @@ let chosenWord = wordList[Math.floor(Math.random() * wordList.length)];
 let guessedLetters = [];
 let hiddenWord = [];
 
+// DOM elements
+let maskedWordEl = document.getElementById('maskedWord');
+let attemptsEl = document.getElementById('attempts');
+let guessedLettersEl = document.getElementById('guessedLetters');
+
 
 // Create underscores to match chosen word length
 for (let i = 0; i < chosenWord.length; i++) {
@@ -73,6 +78,7 @@ function gameReset() {
   for (let i = 0; i < chosenWord.length; i++) {
     hiddenWord.push("_");
   }
+  console.log(`New Word: ${chosenWord}.`);
 }
 
 // ⌨️ Listen for keyboard input when the page loads
