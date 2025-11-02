@@ -46,7 +46,13 @@ function startGame(letter) {
   }
 
   function gameReset() {
+    chosenWord = wordList[Math.floor(Math.random() * wordList.length)];
+    guessedLetters = [];
+    hiddenWord = [];
 
+    for (let i = 0; i < chosenWord.length; i++) {
+      hiddenWord.push("_");
+    }
   }
 
   // 4️⃣ (Bonus) Show guessed letters and progress dynamically in the console or DOM.
